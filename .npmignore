@@ -2,3 +2,4 @@ tsconfig.json
 src
 session
 assets
+node_modules

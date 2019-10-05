@@ -1,13 +1,12 @@
 {
   "name": "bot-wpp",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Javascript whatsapp framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc && npm run build:middleware && npm run build:lib",
+    "build": "npm i && tsc && npm run build:middleware && npm run build:lib && tsc ./src/index.ts --outDir ./dist && node ./dist/index.js",
     "build:lib": "ts-node prebuild.ts",
-    "dev": "npm run build && tsc ./src/index.ts --outDir ./dist && node ./dist/index.js",
     "build:middleware": "tsc --out src/lib/middleware.js src/middleware/middleware.ts --module amd",
     "watch": "npm run build && tsc-watch ./src/index.ts --outDir ./dist --onSuccess \"node ./dist/index.js\" --onFailure \"echo Error while compiling\" --compiler typescript/bin/tsc",
     "clean": "rm -rf session && rm -rf dist",

@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-> npm i bot-wpp
+> npm i --save bot-wpp
 ```
 
 ## Usage

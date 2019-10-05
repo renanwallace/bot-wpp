@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm i && tsc && npm run build:middleware && npm run build:lib",
+    "build": "tsc && npm run build:middleware && npm run build:lib",
     "build:lib": "ts-node prebuild.ts",
+    "dev": "npm run build && tsc ./src/index.ts --outDir ./dist && node ./dist/index.js",
     "build:middleware": "tsc --out src/lib/middleware.js src/middleware/middleware.ts --module amd",
     "watch": "npm run build && tsc-watch ./src/index.ts --outDir ./dist --onSuccess \"node ./dist/index.js\" --onFailure \"echo Error while compiling\" --compiler typescript/bin/tsc",
     "clean": "rm -rf session && rm -rf dist",

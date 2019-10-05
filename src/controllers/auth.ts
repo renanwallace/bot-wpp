@@ -1,4 +1,4 @@
-import ora from 'ora';
+const ora = require('ora');
 import * as puppeteer from 'puppeteer';
 import * as qrcode from 'qrcode-terminal';
 import { from, merge } from 'rxjs';
@@ -7,8 +7,8 @@ import { take } from 'rxjs/operators';
 const spinner = ora();
 
 /**
- * Validates if client is authenticated
- * @returns true if is authenticated, false otherwise
+ * Validando se o cliente está autenticado
+ * @returns true ou false
  * @param waPage
  */
 export const isAuthenticated = (waPage: puppeteer.Page) => {

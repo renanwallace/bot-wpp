@@ -2,7 +2,7 @@
   "name": "bot-wpp",
   "version": "1.0.6",
   "description": "Javascript whatsapp bot framework",
-  "main": "dist/index.js",
+  "main": "dist/index.ts",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "npm i && tsc && npm run build:middleware && npm run build:lib && tsc ./src/index.ts --outDir ./dist && node ./dist/index.js",
